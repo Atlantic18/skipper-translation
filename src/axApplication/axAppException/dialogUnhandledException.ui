@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CDialogUnhandledException</class>
+ <widget class="QDialog" name="CDialogUnhandledException">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>646</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Unhandled Exception</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../Images/images.qrc">
+    <normaloff>:/FunctionImages/crash_16.png</normaloff>:/FunctionImages/crash_16.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="1">
+      <widget class="QLabel" name="labelDescription">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Unhandled exception occurred during [APP] execution. We are sorry for the inconvenience. Please report the error to developers with description about application context and other relevant data.</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="labelCaption">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>[APP] Unhandled Exception</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../../../Images/images.qrc">:/FunctionImages/crash_48.png</pixmap>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="layoutExceptionInfo">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="btnSendReport">
+       <property name="text">
+        <string>Send Report</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../../axQt/axQtCrashHandler/wndReporter/Images/crashReporterImages.qrc">
+         <normaloff>:/CrashReporter/virus16</normaloff>:/CrashReporter/virus16</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnContinue">
+       <property name="text">
+        <string>Continue</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../../Images/images.qrc">
+         <normaloff>:/CommonActions/ok_16.png</normaloff>:/CommonActions/ok_16.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCloseApp">
+       <property name="text">
+        <string>Close Application</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../../Images/images.qrc">
+         <normaloff>:/CommonActions/cross_16.png</normaloff>:/CommonActions/cross_16.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>btnSendReport</tabstop>
+  <tabstop>btnContinue</tabstop>
+  <tabstop>btnCloseApp</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../../Images/images.qrc"/>
+  <include location="../../../axQt/axQtCrashHandler/wndReporter/Images/crashReporterImages.qrc"/>
+ </resources>
+ <connections/>
+</ui>

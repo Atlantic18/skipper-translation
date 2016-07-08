@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CWindowDiagramTest</class>
+ <widget class="QMainWindow" name="CWindowDiagramTest">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string notr="true">File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionPDF"/>
+    <addaction name="actionPNG"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string notr="true">Tools</string>
+    </property>
+    <addaction name="toolArrowTool"/>
+    <addaction name="toolMoveViewport"/>
+    <addaction name="toolZoomViewport"/>
+   </widget>
+   <widget class="QMenu" name="menuModels">
+    <property name="title">
+     <string notr="true">Models</string>
+    </property>
+    <addaction name="actionSimple_model_1"/>
+    <addaction name="actionRegions_model"/>
+    <addaction name="actionComplex_mode"/>
+   </widget>
+   <widget class="QMenu" name="menuGridTest">
+    <property name="title">
+     <string notr="true">GridTest</string>
+    </property>
+    <addaction name="actionWithout_grid"/>
+    <addaction name="actionInvisible_grid"/>
+    <addaction name="actionVisible_grid"/>
+   </widget>
+   <widget class="QMenu" name="menuZoom">
+    <property name="title">
+     <string notr="true">Zoom</string>
+    </property>
+    <addaction name="actionZoom_in"/>
+    <addaction name="actionZoom_out"/>
+    <addaction name="actionZoom_fit"/>
+    <addaction name="actionZoom_100"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuModels"/>
+   <addaction name="menuGridTest"/>
+   <addaction name="menuZoom"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockNavigator">
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllDockWidgetAreas</set>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string notr="true">toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="toolArrowTool"/>
+   <addaction name="toolMoveViewport"/>
+   <addaction name="toolZoomViewport"/>
+   <addaction name="separator"/>
+   <addaction name="toolModule"/>
+   <addaction name="toolRegion"/>
+   <addaction name="toolEntity"/>
+   <addaction name="toolAssociation"/>
+   <addaction name="toolManyToMany"/>
+   <addaction name="toolInheritance"/>
+   <addaction name="toolComment"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="minimumSize">
+    <size>
+     <width>89</width>
+     <height>111</height>
+    </size>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPlainTextEdit" name="editLog"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="toolArrowTool">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">ArrowTool</string>
+   </property>
+  </action>
+  <action name="toolMoveViewport">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">MoveViewport</string>
+   </property>
+  </action>
+  <action name="toolZoomViewport">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">ZoomViewport</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string notr="true">New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string notr="true">Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string notr="true">Save...</string>
+   </property>
+  </action>
+  <action name="actionPDF">
+   <property name="text">
+    <string notr="true">Export to PDF</string>
+   </property>
+  </action>
+  <action name="actionPNG">
+   <property name="text">
+    <string notr="true">Export to PNG</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string notr="true">Exit</string>
+   </property>
+  </action>
+  <action name="actionSimple_model_1">
+   <property name="text">
+    <string notr="true">Simple model - 1</string>
+   </property>
+  </action>
+  <action name="actionRegions_model">
+   <property name="text">
+    <string notr="true">Regions model</string>
+   </property>
+  </action>
+  <action name="actionWithout_grid">
+   <property name="text">
+    <string notr="true">Without grid</string>
+   </property>
+  </action>
+  <action name="actionInvisible_grid">
+   <property name="text">
+    <string notr="true">Invisible grid</string>
+   </property>
+  </action>
+  <action name="actionVisible_grid">
+   <property name="text">
+    <string notr="true">Visible grid</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="text">
+    <string notr="true">Zoom in</string>
+   </property>
+  </action>
+  <action name="actionZoom_out">
+   <property name="text">
+    <string notr="true">Zoom out</string>
+   </property>
+  </action>
+  <action name="actionZoom_fit">
+   <property name="text">
+    <string notr="true">Zoom fit</string>
+   </property>
+  </action>
+  <action name="actionZoom_100">
+   <property name="text">
+    <string notr="true">Zoom 100%</string>
+   </property>
+  </action>
+  <action name="toolModule">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">Module</string>
+   </property>
+  </action>
+  <action name="toolRegion">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">Region</string>
+   </property>
+  </action>
+  <action name="toolEntity">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">Entity</string>
+   </property>
+  </action>
+  <action name="toolAssociation">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">Association</string>
+   </property>
+  </action>
+  <action name="toolManyToMany">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">ManyToMany</string>
+   </property>
+  </action>
+  <action name="toolInheritance">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">Inheritance</string>
+   </property>
+  </action>
+  <action name="toolComment">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string notr="true">Comment</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string notr="true">Test action from QtCreator</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
+   </property>
+  </action>
+  <action name="actionTest2">
+   <property name="text">
+    <string notr="true">actionTest2 - second test</string>
+   </property>
+  </action>
+  <action name="actionComplex_mode">
+   <property name="text">
+    <string>Complex mode</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

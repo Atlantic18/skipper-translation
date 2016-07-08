@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CDialogModelEntityEditor</class>
+ <widget class="QDialog" name="CDialogModelEntityEditor">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>839</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>665</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Entity Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Images/images.qrc">
+    <normaloff>:/ModelObjects/entity_16.png</normaloff>:/ModelObjects/entity_16.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelName">
+       <property name="text">
+        <string>Entity name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="editName">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>23</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="labelDescription">
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3" rowspan="2">
+      <widget class="QPlainTextEdit" name="editDescription">
+       <property name="tabChangesFocus">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelLocation">
+       <property name="text">
+        <string>Entity location</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="editLocation">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>23</height>
+        </size>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Atomix::QtExt::QTabWidgetEx" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabFields">
+      <attribute name="icon">
+       <iconset resource="../../Images/images.qrc">
+        <normaloff>:/ModelObjects/entity_16.png</normaloff>:/ModelObjects/entity_16.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Field Properties</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="layoutFieldsActions">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="toolButtonFieldAdd">
+           <property name="toolTip">
+            <string>&lt;p&gt;Add new field to entity.&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot; font-style:italic;&quot;&gt;Shortcuts:&lt;/span&gt;&lt;br /&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;INSERT&lt;/span&gt; Add new field to last position.&lt;br/&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;CTRL+INSERT&lt;/span&gt; Add new field to current position.
+&lt;/p&gt;</string>
+           </property>
+           <property name="text">
+            <string>Add Field</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/images.qrc">
+             <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ins</string>
+           </property>
+           <property name="popupMode">
+            <enum>QToolButton::DelayedPopup</enum>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButtonFieldRemove">
+           <property name="toolTip">
+            <string>&lt;p&gt;Remove selected field from entity.&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot; font-style:italic;&quot;&gt;Shortcuts:&lt;/span&gt;
+&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;DEL&lt;/span&gt;
+&lt;/p&gt;
+</string>
+           </property>
+           <property name="text">
+            <string>Remove Field</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/images.qrc">
+             <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Del</string>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="lineSeparator">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButtonFieldUp">
+           <property name="toolTip">
+            <string>&lt;p&gt;Move selected field up by one.&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot; font-style:italic;&quot;&gt;Shortcuts:&lt;/span&gt;
+&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;CTRL+UP&lt;/span&gt;
+&lt;/p&gt;
+</string>
+           </property>
+           <property name="text">
+            <string>Item Up</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/images.qrc">
+             <normaloff>:/CommonActions/arrowMoveUp_16.png</normaloff>:/CommonActions/arrowMoveUp_16.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+Up</string>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButtonFieldDown">
+           <property name="toolTip">
+            <string>&lt;p&gt;Move selected field down by one.&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot; font-style:italic;&quot;&gt;Shortcuts:&lt;/span&gt;
+&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;CTRL+DOWN&lt;/span&gt;
+&lt;/p&gt;
+</string>
+           </property>
+           <property name="text">
+            <string>Item Down</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/images.qrc">
+             <normaloff>:/CommonActions/arrowMoveDown_16.png</normaloff>:/CommonActions/arrowMoveDown_16.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+Down</string>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButtonFieldFirst">
+           <property name="toolTip">
+            <string>&lt;p&gt;Move selected field to first position.&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot; font-style:italic;&quot;&gt;Shortcuts:&lt;/span&gt;
+&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;CTRL+SHIFT+UP&lt;/span&gt;
+&lt;/p&gt;
+</string>
+           </property>
+           <property name="text">
+            <string>Item First</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/images.qrc">
+             <normaloff>:/CommonActions/arrowMoveFirst_16.png</normaloff>:/CommonActions/arrowMoveFirst_16.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+Shift+Up</string>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButtonFieldLast">
+           <property name="toolTip">
+            <string>&lt;p&gt;Move selected field to last position.&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot; font-style:italic;&quot;&gt;Shortcuts:&lt;/span&gt;
+&lt;span style=&quot; font-size:8pt; font-weight:600;&quot;&gt;CTRL+SHIFT+DOWN&lt;/span&gt;
+&lt;/p&gt;
+</string>
+           </property>
+           <property name="text">
+            <string>Item Last</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/images.qrc">
+             <normaloff>:/CommonActions/arrowMoveLast_16.png</normaloff>:/CommonActions/arrowMoveLast_16.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+Shift+Up</string>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Atomix::QtExt::QTableViewEx" name="tableFields">
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectItems</enum>
+         </property>
+         <property name="verticalScrollMode">
+          <enum>QAbstractItemView::ScrollPerItem</enum>
+         </property>
+         <property name="horizontalScrollMode">
+          <enum>QAbstractItemView::ScrollPerPixel</enum>
+         </property>
+         <attribute name="horizontalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabIndexes">
+      <attribute name="icon">
+       <iconset resource="../../Images/images.qrc">
+        <normaloff>:/ModelObjects/index_16.png</normaloff>:/ModelObjects/index_16.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Indexes</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QGridLayout" name="gridIndexes" columnstretch="3,1">
+         <item row="0" column="1">
+          <widget class="QLabel" name="labelIndexedFields">
+           <property name="text">
+            <string>Indexed Fields</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QTableView" name="tableIndexes">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="horizontalScrollMode">
+            <enum>QAbstractItemView::ScrollPerPixel</enum>
+           </property>
+           <attribute name="horizontalHeaderHighlightSections">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTableView" name="tableIndexFields">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <attribute name="horizontalHeaderHighlightSections">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="layoutIndexActions">
+           <item>
+            <widget class="QToolButton" name="toolButtonIndexAdd">
+             <property name="text">
+              <string>Add Index</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::DelayedPopup</enum>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonIndexEdit">
+             <property name="text">
+              <string>Edit Index</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/edit_16.png</normaloff>:/CommonActions/edit_16.png</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonIndexRemove">
+             <property name="text">
+              <string>Remove Index</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="labelIndexDescription">
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="editIndexDescription">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAssociations">
+      <attribute name="icon">
+       <iconset resource="../../Images/images.qrc">
+        <normaloff>:/ModelObjects/association_16.png</normaloff>:/ModelObjects/association_16.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Associations</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QGridLayout" name="gridAssociations" columnstretch="3,1">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="1">
+          <widget class="QLabel" name="labelAssociationFields">
+           <property name="text">
+            <string>Association Fields</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QTableView" name="tableAssociations">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="horizontalScrollMode">
+            <enum>QAbstractItemView::ScrollPerPixel</enum>
+           </property>
+           <attribute name="horizontalHeaderHighlightSections">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QTableView" name="tableAssociationFields">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <attribute name="horizontalHeaderHighlightSections">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="layoutAssociationActions">
+           <item>
+            <widget class="QToolButton" name="toolButtonAssociationAdd">
+             <property name="text">
+              <string>Add Association</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::DelayedPopup</enum>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonAssociationMnAdd">
+             <property name="text">
+              <string>Add ManyToMany</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonAssociationEdit">
+             <property name="text">
+              <string>Edit Association</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/edit_16.png</normaloff>:/CommonActions/edit_16.png</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonAssociationRemove">
+             <property name="text">
+              <string>Remove Association</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutDescription_2" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="labelAssociationDescription">
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="editAssociationDescription">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabInheritance">
+      <attribute name="icon">
+       <iconset resource="../../Images/images.qrc">
+        <normaloff>:/ModelObjects/inheritance_16.png</normaloff>:/ModelObjects/inheritance_16.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Inheritance</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QGridLayout" name="gridInheritance" columnstretch="6">
+         <item row="1" column="0">
+          <widget class="QTableView" name="tableInheritance">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="horizontalScrollMode">
+            <enum>QAbstractItemView::ScrollPerPixel</enum>
+           </property>
+           <attribute name="horizontalHeaderHighlightSections">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="layoutInheritacesActions">
+           <item>
+            <widget class="QToolButton" name="toolButtonInheritanceAdd">
+             <property name="text">
+              <string>Add Inheritance</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::DelayedPopup</enum>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonInheritanceEdit">
+             <property name="text">
+              <string>Edit Inheritance</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/edit_16.png</normaloff>:/CommonActions/edit_16.png</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonInheritanceRemove">
+             <property name="text">
+              <string>Remove Inheritance</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/images.qrc">
+               <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutDescription" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="labelInheritanceDescription">
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="editInheritanceDescription">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAppearance">
+      <attribute name="icon">
+       <iconset resource="../../Images/images.qrc">
+        <normaloff>:/FunctionImages/palette_16.png</normaloff>:/FunctionImages/palette_16.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Appearance</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="layoutVisualSettings">
+         <item>
+          <widget class="QLabel" name="labelInfo_6">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="text">
+            <string>Visual Settings</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="lineInfo_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,2">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,2">
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>10</number>
+           </property>
+           <item row="0" column="1">
+            <widget class="Atomix::QtGui::QtColorPickerButton" name="widgetColorHeader" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="Atomix::QtGui::QtColorPickerButton" name="widgetColorBackground" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Background Color</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Header Color</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <action name="actionFieldAddCurrentPosition">
+   <property name="text">
+    <string notr="true">FieldAddCurrentPosition</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">FieldAddCurrentPosition</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Ins</string>
+   </property>
+  </action>
+  <action name="actionFieldAdd">
+   <property name="text">
+    <string notr="true">actionFieldAdd</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">FieldAdd</string>
+   </property>
+  </action>
+  <action name="actionFieldDel">
+   <property name="text">
+    <string notr="true">actionFieldDel</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">FieldDel</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Atomix::QtExt::QTabWidgetEx</class>
+   <extends>QTabWidget</extends>
+   <header>axQt/axQtGui/tabWidgetEx.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Atomix::QtGui::QtColorPickerButton</class>
+   <extends>QWidget</extends>
+   <header location="global">axQt/axQtGui/colorPicker.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Atomix::QtExt::QTableViewEx</class>
+   <extends>QTableView</extends>
+   <header>axQt/axQtGui/tableViewEx.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>editName</tabstop>
+  <tabstop>editDescription</tabstop>
+  <tabstop>editLocation</tabstop>
+  <tabstop>toolButtonFieldAdd</tabstop>
+  <tabstop>toolButtonFieldRemove</tabstop>
+  <tabstop>toolButtonFieldUp</tabstop>
+  <tabstop>toolButtonFieldDown</tabstop>
+  <tabstop>toolButtonFieldFirst</tabstop>
+  <tabstop>toolButtonFieldLast</tabstop>
+  <tabstop>tableFields</tabstop>
+  <tabstop>toolButtonIndexAdd</tabstop>
+  <tabstop>toolButtonIndexEdit</tabstop>
+  <tabstop>toolButtonIndexRemove</tabstop>
+  <tabstop>tableIndexes</tabstop>
+  <tabstop>tableIndexFields</tabstop>
+  <tabstop>toolButtonAssociationAdd</tabstop>
+  <tabstop>toolButtonAssociationEdit</tabstop>
+  <tabstop>toolButtonAssociationRemove</tabstop>
+  <tabstop>tableAssociations</tabstop>
+  <tabstop>tableAssociationFields</tabstop>
+  <tabstop>editAssociationDescription</tabstop>
+  <tabstop>toolButtonInheritanceAdd</tabstop>
+  <tabstop>toolButtonInheritanceEdit</tabstop>
+  <tabstop>toolButtonInheritanceRemove</tabstop>
+  <tabstop>tableInheritance</tabstop>
+  <tabstop>editInheritanceDescription</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>buttonBox</tabstop>
+  <tabstop>editIndexDescription</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../Images/images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>CDialogModelEntityEditor</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>CDialogModelEntityEditor</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

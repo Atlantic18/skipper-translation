@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CDialogWidgetPropertyEditorTest</class>
+ <widget class="QDialog" name="CDialogWidgetPropertyEditorTest">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>674</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="10,0">
+   <item row="0" column="1">
+    <widget class="QWidget" name="containerButtons" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinAndMaxSize</enum>
+      </property>
+      <item>
+       <widget class="QPushButton" name="btnSimpleProperties">
+        <property name="text">
+         <string notr="true">Simple properties</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnStructuredProperties">
+        <property name="text">
+         <string notr="true">Structured properties</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnContainerProperties">
+        <property name="text">
+         <string notr="true">Containers properties</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnMultiLevelContainer">
+        <property name="text">
+         <string notr="true">MultiLevel containers</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEnumProperties">
+        <property name="text">
+         <string notr="true">Enum properties</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEnumPropertiesWithObject">
+        <property name="text">
+         <string notr="true">Enum + Object props</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnReferenceAttrs">
+        <property name="text">
+         <string notr="true">RefAttrs props</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnObjectWithoutAttrs">
+        <property name="text">
+         <string notr="true">Object W/A attrs</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnObjectWithoutAttrs2">
+        <property name="text">
+         <string notr="true">Object W/A attrs2</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSecondObjectAttrs">
+        <property name="text">
+         <string notr="true">SecondObject attrs</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDoctrineEntity">
+        <property name="text">
+         <string notr="true">Doctrine entity</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDoctrine2MN">
+        <property name="text">
+         <string notr="true">Doctrine2 entity</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRefreshData">
+        <property name="text">
+         <string notr="true">Refresh data</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDebugData">
+        <property name="text">
+         <string notr="true">Display debug data</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboDeleteMode"/>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnTest">
+        <property name="text">
+         <string notr="true">Test</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnGlobalSettings">
+        <property name="text">
+         <string notr="true">GlobalSettings</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="CWidgetPropertyEditor" name="innerPropertyEditor" native="true">
+     <layout class="QVBoxLayout" name="widgetPropertyEditor"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CWidgetPropertyEditor</class>
+   <extends>QWidget</extends>
+   <header>Gui/PropertyEditor/widgetPropertyEditor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

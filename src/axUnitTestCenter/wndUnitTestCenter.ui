@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CWndUnitTestCenter</class>
+ <widget class="QDialog" name="CWndUnitTestCenter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>913</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+  <string notr="true">Unit test center</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0">
+   <property name="spacing">
+    <number>5</number>
+   </property>
+   <property name="margin">
+    <number>5</number>
+   </property>
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QTreeView" name="treeTests">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>3</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="groupBenchmark">
+         <property name="title">
+         <string notr="true">Benchmark settings</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QGridLayout" name="gridBenchmark">
+            <item row="0" column="3">
+             <widget class="QToolButton" name="btnSaveBenchmark">
+              <property name="text">
+              <string notr="true">...</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Res/TestCenterImages.qrc">
+                <normaloff>:/UnitTestCenter/file_save.png</normaloff>:/UnitTestCenter/file_save.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QToolButton" name="btnLoadBenchmark">
+              <property name="text">
+              <string notr="true">...</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Res/TestCenterImages.qrc">
+                <normaloff>:/UnitTestCenter/file_open.png</normaloff>:/UnitTestCenter/file_open.png</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QComboBox" name="comboOldBenchmarks"/>
+            </item>
+            <item row="0" column="4">
+             <widget class="QToolButton" name="btnResetStats">
+              <property name="text">
+              <string notr="true">Reset statistics</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Res/TestCenterImages.qrc">
+                <normaloff>:/UnitTestCenter/reset_stats.png</normaloff>:/UnitTestCenter/reset_stats.png</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="textOutput">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>2</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="sizeIncrement">
+          <size>
+           <width>1</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="lineWrapMode">
+          <enum>QPlainTextEdit::NoWrap</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QToolButton" name="btnSelection1">
+       <property name="toolTip">
+       <string notr="true">Click to load selection, click + SHIFT/CTRL to store selection</string>
+       </property>
+       <property name="text">
+       <string notr="true">1</string>
+       </property>
+       <property name="shortcut">
+       <string>Alt+1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btnSelection2">
+       <property name="toolTip">
+       <string notr="true">Click to load selection, click + SHIFT/CTRL to store selection</string>
+       </property>
+       <property name="text">
+       <string notr="true">2</string>
+       </property>
+       <property name="shortcut">
+       <string>Alt+2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="btnSelection3">
+       <property name="toolTip">
+       <string notr="true">Click to load selection, click + SHIFT/CTRL to store selection</string>
+       </property>
+       <property name="text">
+       <string notr="true">3</string>
+       </property>
+       <property name="shortcut">
+       <string>Alt+3</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnDeselectAll">
+       <property name="text">
+       <string notr="true">Deselect All</string>
+       </property>
+       <property name="shortcut">
+       <string>Alt+D</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnGlobalConfig">
+       <property name="text">
+       <string notr="true">Global Config</string>
+       </property>
+       <property name="shortcut">
+       <string>Alt+G</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkDisplayTasks">
+       <property name="text">
+       <string notr="true">ShowTasks</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkRunOnStartup">
+       <property name="text">
+       <string notr="true">Run on startup</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkStopOnError">
+       <property name="text">
+       <string notr="true">Stop on error</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinRepeatCount">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+       <string notr="true">x</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinRunQuantity">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>99999</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnRunTests">
+       <property name="text">
+       <string notr="true">Run selected tests</string>
+       </property>
+       <property name="shortcut">
+       <string>Alt+R</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnUtBenchmark">
+       <property name="text">
+       <string notr="true">Test / Bench</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExit">
+       <property name="text">
+       <string notr="true">Exit</string>
+       </property>
+       <property name="shortcut">
+       <string>Alt+X</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Res/TestCenterImages.qrc"/>
+ </resources>
+ <connections/>
+</ui>

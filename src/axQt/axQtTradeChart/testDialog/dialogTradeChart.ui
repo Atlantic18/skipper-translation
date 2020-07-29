@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CDialogTradeChart</class>
+ <widget class="QDialog" name="CDialogTradeChart">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>747</width>
+    <height>451</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="9" column="3">
+      <widget class="QPushButton" name="btnPropertyEditor">
+       <property name="text">
+        <string>Property editor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="btnControlViewItem">
+       <property name="text">
+        <string>DataControl item</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QPushButton" name="btnChangingChartDataRange">
+       <property name="text">
+        <string>Changing data range</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QPushButton" name="btnGraphicsLayoutGridExtended">
+       <property name="text">
+        <string>QtGraphicGridLayout extended</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QPushButton" name="btnChartWidget">
+       <property name="text">
+        <string>Chart Widget</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="btnScrollToValue">
+       <property name="text">
+        <string>Chart with data - Scroll to Value</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QPushButton" name="btnStyle">
+       <property name="text">
+        <string>Styles</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="btnAxeWithItemStep">
+       <property name="text">
+        <string>Axes item step</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QPushButton" name="btnDrawingCanvas">
+       <property name="text">
+        <string>Drawing Canvas</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="btnZoomAndMoveSynchronized">
+       <property name="text">
+        <string>Synchronized move,zoom,cursor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="btnAxes">
+       <property name="text">
+        <string>Axes default</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QPushButton" name="btnDrawing">
+       <property name="text">
+        <string>Drawing</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="btnZoomAndMove">
+       <property name="text">
+        <string>Zoom and move</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="btnChartLayouts">
+       <property name="text">
+        <string>Chart layouts</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="2">
+      <widget class="QPushButton" name="btnSerialization">
+       <property name="text">
+        <string>Serialization</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="btnChartTypes">
+       <property name="text">
+        <string>Chart types</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="btnChartData">
+       <property name="text">
+        <string>Chart with data</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QPushButton" name="btnGraphicsLayoutLinearExtended">
+       <property name="text">
+        <string>QtGraphicLinearLayout extended</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="btnZoomAndMoveCfgs">
+       <property name="text">
+        <string>Zoom and move CFGs</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="btnFloatingPointAxe">
+       <property name="text">
+        <string>Floating point axe</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QPushButton" name="btnIndicatorsGroup">
+       <property name="text">
+        <string>Indicators group</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="btnChangingChartTimeframes">
+       <property name="text">
+        <string>Changing data timeframes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="btnIndicatorValues">
+       <property name="text">
+        <string>Indicator Overview</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3">
+      <widget class="QPushButton" name="btnLayoutResizing">
+       <property name="text">
+        <string>Layout risizng</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="btnGridLines">
+       <property name="text">
+        <string>Grid lines</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QPushButton" name="btnGraphicsControls">
+       <property name="text">
+        <string>Controls</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="btnDateAxe">
+       <property name="text">
+        <string>Date axe</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="btnChartInnerCalculations">
+       <property name="text">
+        <string>Chart inner calculations</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QPushButton" name="btnLayouts">
+       <property name="text">
+        <string>Qt Graphics Layouts</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QPushButton" name="btnChartDrawing">
+       <property name="text">
+        <string>Chart drawing</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="4">
+      <widget class="QPushButton" name="btnSymetricGrid">
+       <property name="text">
+        <string>Symetric grid</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QPushButton" name="btnChartMultiWidget">
+       <property name="text">
+        <string>Chart Multi Widget</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QPushButton" name="btnChartDrawingMultiple">
+       <property name="text">
+        <string>Chart drawing multiple</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

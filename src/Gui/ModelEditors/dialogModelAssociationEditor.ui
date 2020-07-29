@@ -14,7 +14,7 @@
    <string>Association Editor</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../Images/images.qrc">
+   <iconset resource="../../Images/skipperImages.qrc">
     <normaloff>:/ModelObjects/association_16.png</normaloff>:/ModelObjects/association_16.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -25,7 +25,7 @@
      </property>
      <widget class="QWidget" name="tabCommon">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/association_16.png</normaloff>:/ModelObjects/association_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -200,7 +200,7 @@
             <enum>QFrame::NoFrame</enum>
            </property>
            <property name="text">
-            <string>Association settings</string>
+            <string>Association Settings</string>
            </property>
           </widget>
          </item>
@@ -419,7 +419,7 @@
      </widget>
      <widget class="QWidget" name="tabFields">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/field_16.png</normaloff>:/ModelObjects/field_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -503,6 +503,119 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="tabPolymorph">
+      <attribute name="icon">
+       <iconset resource="../../Images/skipperImages.qrc">
+        <normaloff>:/ModelObjects/association_16.png</normaloff>:/ModelObjects/association_16.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Polymorphic</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="layoutAssocFields_2">
+         <item>
+          <widget class="QLabel" name="labelPolymorphicCaption">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="text">
+            <string>Polymorphic Association</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="labelPolymorphicCaption2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridFields_2" columnminimumwidth="150,0">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>10</number>
+         </property>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="editPolymorphicTypeField"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelFieldId">
+           <property name="text">
+            <string>Id field</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="editPolymorphicIdField"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelPolymorphicName">
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelFieldType">
+           <property name="text">
+            <string>Type field</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="editPolymorphicIdentification"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelFieldIdentification">
+           <property name="text">
+            <string>Custom Identification</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="editPolymorphicName"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
    <item>
@@ -530,18 +643,18 @@
  </customwidgets>
  <tabstops>
   <tabstop>editCaption</tabstop>
+  <tabstop>checkSplitAssociation</tabstop>
   <tabstop>editEntityInverse</tabstop>
   <tabstop>editAliasInverse</tabstop>
   <tabstop>editEntityOwner</tabstop>
   <tabstop>editAliasOwner</tabstop>
   <tabstop>comboAssociationType</tabstop>
   <tabstop>comboParentConnection</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>buttonBox</tabstop>
   <tabstop>tableFields</tabstop>
+  <tabstop>editDescription</tabstop>
  </tabstops>
  <resources>
-  <include location="../../Images/images.qrc"/>
+  <include location="../../Images/skipperImages.qrc"/>
  </resources>
  <connections>
   <connection>

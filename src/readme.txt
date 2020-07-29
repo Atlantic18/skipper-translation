@@ -2,7 +2,7 @@ Archive contains empty language file for your translations and folders with gui 
 Keep the folder structure intact so you can see the dialogue windows in QT Linguist:
 
 1. Extract the archive on your computer
-2. Use QT linguist to open the \LanguageFiles\texts_empty.ts file
+2. Use QT linguist from \linguist and open the src\Translations\*.ts file
 
 If you want to prepare new translation simply copy the texts_empty.ts under new name. From the text header remove the language identifier:
 

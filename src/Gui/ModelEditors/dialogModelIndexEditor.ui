@@ -208,7 +208,7 @@
   <tabstop>checkUniqueIndex</tabstop>
   <tabstop>editDescription</tabstop>
   <tabstop>tableIndexFields</tabstop>
-  <tabstop>tabWidget</tabstop>
+  
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources>

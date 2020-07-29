@@ -21,7 +21,16 @@
    <property name="spacing">
     <number>0</number>
    </property>
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -167,7 +176,7 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0">
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,2">
          <item>
           <layout class="QVBoxLayout" name="verticalLayout">
            <property name="spacing">
@@ -192,7 +201,7 @@
            <item>
             <widget class="QCheckBox" name="checkAttachProjectFiles">
              <property name="text">
-              <string>Attach opened project files</string>
+              <string>Attach project files</string>
              </property>
              <property name="checked">
               <bool>true</bool>
@@ -315,6 +324,10 @@
        </property>
        <property name="text">
         <string>Send Crash Report</string>
+       </property>
+       <property name="icon">
+        <iconset resource="Images/crashReporterImages.qrc">
+         <normaloff>:/CrashReporter/send16</normaloff>:/CrashReporter/send16</iconset>
        </property>
       </widget>
      </item>

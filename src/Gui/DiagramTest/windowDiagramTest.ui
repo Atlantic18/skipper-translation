@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>900</width>
     <height>600</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>900</width>
      <height>21</height>
     </rect>
    </property>
@@ -50,6 +50,7 @@
      <string notr="true">Models</string>
     </property>
     <addaction name="actionSimple_model_1"/>
+		 <addaction name="actionSimple_model_2"/>
     <addaction name="actionRegions_model"/>
     <addaction name="actionComplex_mode"/>
    </widget>
@@ -107,9 +108,13 @@
    <addaction name="toolRegion"/>
    <addaction name="toolEntity"/>
    <addaction name="toolAssociation"/>
+	 <addaction name="toolEmbedded"/>
    <addaction name="toolManyToMany"/>
    <addaction name="toolInheritance"/>
    <addaction name="toolComment"/>
+	 <addaction name="toolCollection"/>
+	 <addaction name="toolCollectionEntity"/>
+	 <addaction name="toolUniversalObject"/>
   </widget>
   <widget class="QDockWidget" name="dockWidget">
    <property name="minimumSize">
@@ -136,12 +141,18 @@
    <property name="text">
     <string notr="true">ArrowTool</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">ArrowTool</string>
+   </property>
   </action>
   <action name="toolMoveViewport">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
+    <string notr="true">MoveViewport</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">MoveViewport</string>
    </property>
   </action>
@@ -152,9 +163,15 @@
    <property name="text">
     <string notr="true">ZoomViewport</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">ZoomViewport</string>
+   </property>
   </action>
   <action name="actionNew">
    <property name="text">
+    <string notr="true">New</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">New</string>
    </property>
   </action>
@@ -162,14 +179,23 @@
    <property name="text">
     <string notr="true">Open</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Open</string>
+   </property>
   </action>
   <action name="actionSave">
    <property name="text">
     <string notr="true">Save...</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Save</string>
+   </property>
   </action>
   <action name="actionPDF">
    <property name="text">
+    <string notr="true">Export to PDF</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">Export to PDF</string>
    </property>
   </action>
@@ -177,9 +203,15 @@
    <property name="text">
     <string notr="true">Export to PNG</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Export to PNG</string>
+   </property>
   </action>
   <action name="actionExit">
    <property name="text">
+    <string notr="true">Exit</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">Exit</string>
    </property>
   </action>
@@ -187,9 +219,23 @@
    <property name="text">
     <string notr="true">Simple model - 1</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Simple model - 1</string>
+   </property>
   </action>
+	 <action name="actionSimple_model_2">
+		 <property name="text">
+			 <string notr="true">Simple model - 2</string>
+		 </property>
+		 <property name="toolTip">
+			 <string notr="true">Simple model - 2</string>
+		 </property>
+	 </action>
   <action name="actionRegions_model">
    <property name="text">
+    <string notr="true">Regions model</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">Regions model</string>
    </property>
   </action>
@@ -212,9 +258,15 @@
    <property name="text">
     <string notr="true">Zoom in</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Zoom in</string>
+   </property>
   </action>
   <action name="actionZoom_out">
    <property name="text">
+    <string notr="true">Zoom out</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">Zoom out</string>
    </property>
   </action>
@@ -222,9 +274,15 @@
    <property name="text">
     <string notr="true">Zoom fit</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Zoom fit</string>
+   </property>
   </action>
   <action name="actionZoom_100">
    <property name="text">
+    <string notr="true">Zoom 100%</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">Zoom 100%</string>
    </property>
   </action>
@@ -235,12 +293,18 @@
    <property name="text">
     <string notr="true">Module</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Module</string>
+   </property>
   </action>
   <action name="toolRegion">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
+    <string notr="true">Region</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">Region</string>
    </property>
   </action>
@@ -251,6 +315,9 @@
    <property name="text">
     <string notr="true">Entity</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Entity</string>
+   </property>
   </action>
   <action name="toolAssociation">
    <property name="checkable">
@@ -259,12 +326,29 @@
    <property name="text">
     <string notr="true">Association</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Association</string>
+   </property>
   </action>
+	 <action name="toolEmbedded">
+		 <property name="checkable">
+			 <bool>true</bool>
+		 </property>
+		 <property name="text">
+			 <string notr="true">Embedded</string>
+		 </property>
+		 <property name="toolTip">
+			 <string notr="true">Embedded</string>
+		 </property>
+	 </action>
   <action name="toolManyToMany">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
+    <string notr="true">ManyToMany</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">ManyToMany</string>
    </property>
   </action>
@@ -275,6 +359,9 @@
    <property name="text">
     <string notr="true">Inheritance</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Inheritance</string>
+   </property>
   </action>
   <action name="toolComment">
    <property name="checkable">
@@ -283,13 +370,53 @@
    <property name="text">
     <string notr="true">Comment</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Comment</string>
+   </property>
   </action>
+	 <action name="toolUniversalObject">
+		 <property name="checkable">
+			 <bool>true</bool>
+		 </property>
+		 <property name="text">
+			 <string notr="true">UniversalObject</string>
+		 </property>
+		 <property name="toolTip">
+			 <string notr="true">UniversalObject</string>
+		 </property>
+	 </action>
+
+	 <action name="toolCollection">
+		 <property name="checkable">
+			 <bool>true</bool>
+		 </property>
+		 <property name="text">
+			 <string notr="true">Collection</string>
+		 </property>
+		 <property name="toolTip">
+			 <string notr="true">Collection</string>
+		 </property>
+	 </action>
+
+	 <action name="toolCollectionEntity">
+		 <property name="checkable">
+			 <bool>true</bool>
+		 </property>
+		 <property name="text">
+			 <string notr="true">CollectionEntity</string>
+		 </property>
+		 <property name="toolTip">
+			 <string notr="true">CollectionEntity</string>
+		 </property>
+	 </action>
+	 
+	 
   <action name="actionTest">
    <property name="text">
     <string notr="true">Test action from QtCreator</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Alt+S</string>
+    <string notr="true">Ctrl+Alt+S</string>
    </property>
   </action>
   <action name="actionTest2">
@@ -299,12 +426,18 @@
   </action>
   <action name="actionComplex_mode">
    <property name="text">
-    <string>Complex mode</string>
+    <string notr="true">Complex mode</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">Complex mode</string>
    </property>
   </action>
   <action name="actionPrint">
    <property name="text">
-    <string>Print</string>
+    <string notr="true">Print</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">Print</string>
    </property>
   </action>
  </widget>

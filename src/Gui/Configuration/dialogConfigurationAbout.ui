@@ -14,7 +14,16 @@
    <string notr="true">Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -159,7 +168,7 @@
               <string>...</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/FunctionImages/web_16.png</normaloff>:/FunctionImages/web_16.png</iconset>
              </property>
             </widget>
@@ -170,7 +179,7 @@
               <string>...</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/FunctionImages/web_16.png</normaloff>:/FunctionImages/web_16.png</iconset>
              </property>
             </widget>
@@ -181,7 +190,7 @@
               <string>...</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/FunctionImages/email_16.png</normaloff>:/FunctionImages/email_16.png</iconset>
              </property>
             </widget>
@@ -279,6 +288,23 @@
              </property>
             </widget>
            </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.famfamfam.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.famfamfam.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string notr="true">Creative Commons Attribution 3.0</string>
+             </property>
+            </widget>
+           </item>
            <item row="0" column="3">
             <widget class="QLabel" name="label_4">
              <property name="font">
@@ -299,20 +325,10 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="2">
-            <widget class="QLabel" name="label_6">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_12">
              <property name="text">
-              <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.famfamfam.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.famfamfam.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="openExternalLinks">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="3">
-            <widget class="QLabel" name="label_10">
-             <property name="text">
-              <string notr="true">Creative Commons Attribution 3.0</string>
+              <string notr="true">Nokia Qt</string>
              </property>
             </widget>
            </item>
@@ -326,17 +342,30 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string notr="true">Nokia Qt</string>
-             </property>
-            </widget>
-           </item>
            <item row="1" column="3">
             <widget class="QLabel" name="label_14">
              <property name="text">
               <string notr="true">GNU Lesser General Public License (LGPL) version 2.1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_18">
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Version</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string notr="true">Commercial License</string>
              </property>
             </widget>
            </item>
@@ -357,42 +386,15 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="3">
-            <widget class="QLabel" name="label_17">
-             <property name="text">
-              <string notr="true">Commercial License</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="label_18">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Version</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="labelQtVersion">
+           <item row="5" column="1">
+            <widget class="QLabel" name="labelBoostVersion">
              <property name="text">
               <string notr="true">TextLabel</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="label_21">
-             <property name="text">
-              <string notr="true">Boost c++ Libraries</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QLabel" name="labelBoostVersion">
+           <item row="1" column="1">
+            <widget class="QLabel" name="labelQtVersion">
              <property name="text">
               <string notr="true">TextLabel</string>
              </property>
@@ -405,6 +407,13 @@
              </property>
              <property name="openExternalLinks">
               <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string notr="true">Boost c++ Libraries</string>
              </property>
             </widget>
            </item>
@@ -429,13 +438,10 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="2">
-            <widget class="QLabel" name="labelLibXmlUrl">
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_23">
              <property name="text">
-              <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.xmlsoft.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.xmlsoft.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="openExternalLinks">
-              <bool>true</bool>
+              <string notr="true">SQLite libraries</string>
              </property>
             </widget>
            </item>
@@ -446,10 +452,13 @@
              </property>
             </widget>
            </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="label_23">
+           <item row="6" column="2">
+            <widget class="QLabel" name="labelLibXmlUrl">
              <property name="text">
-              <string notr="true">SQLite libraries</string>
+              <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.xmlsoft.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.xmlsoft.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
              </property>
             </widget>
            </item>
@@ -457,6 +466,20 @@
             <widget class="QLabel" name="labelSqliteVersion">
              <property name="text">
               <string notr="true">TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLabel" name="labelRibbonVersion">
+             <property name="text">
+              <string notr="true">TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QLabel" name="label_26">
+             <property name="text">
+              <string notr="true">Public domain</string>
              </property>
             </widget>
            </item>
@@ -470,17 +493,34 @@
              </property>
             </widget>
            </item>
-           <item row="7" column="3">
-            <widget class="QLabel" name="label_26">
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_19">
              <property name="text">
-              <string notr="true">Public domain</string>
+              <string notr="true">Cryptop++ library</string>
              </property>
             </widget>
            </item>
-           <item row="4" column="1">
-            <widget class="QLabel" name="labelRibbonVersion">
+           <item row="8" column="1">
+            <widget class="QLabel" name="labelCryptopPpVersion">
              <property name="text">
               <string notr="true">TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://www.cryptopp.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.cryptopp.com/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string notr="true">Boost Software License 1.0</string>
              </property>
             </widget>
            </item>
@@ -503,10 +543,9 @@
   <tabstop>btnOpenProductWeb</tabstop>
   <tabstop>editMail</tabstop>
   <tabstop>btnSendEmail</tabstop>
-  <tabstop>tabWidget</tabstop>
  </tabstops>
  <resources>
-  <include location="../../Images/images.qrc"/>
+  <include location="../../Images/skipperImages.qrc"/>
  </resources>
  <connections/>
 </ui>

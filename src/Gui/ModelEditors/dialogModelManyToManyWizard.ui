@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>443</width>
-    <height>499</height>
+    <width>548</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Many To Many Wizard</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../Images/images.qrc">
+   <iconset resource="../../Images/skipperImages.qrc">
     <normaloff>:/ModelObjects/manyToMany_16.png</normaloff>:/ModelObjects/manyToMany_16.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -25,7 +25,7 @@
      </property>
      <widget class="QWidget" name="tabData">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/manyToMany_16.png</normaloff>:/ModelObjects/manyToMany_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -76,30 +76,37 @@
          <property name="verticalSpacing">
           <number>10</number>
          </property>
-         <item row="3" column="0">
-          <widget class="QLabel" name="labelMNEntity">
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelInverseEntity">
            <property name="text">
-            <string>MN Entity</string>
+            <string>Inverse Entity</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="labelOwnerEntity">
+         <item row="1" column="1" colspan="2">
+          <widget class="QComboBox" name="comboEntityInverse">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="text">
-            <string>Owner Entity</string>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="labelInverseEntity">
+         <item row="3" column="2">
+          <widget class="QToolButton" name="btnGenerateMany2ManyName">
            <property name="text">
-            <string>Inverse Entity</string>
+            <string>Generate name for MN association</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/skipperImages.qrc">
+             <normaloff>:/FunctionImages/alias_16.png</normaloff>:/FunctionImages/alias_16.png</iconset>
            </property>
           </widget>
          </item>
@@ -133,14 +140,16 @@
            </item>
           </layout>
          </item>
-         <item row="3" column="2">
-          <widget class="QToolButton" name="btnGenerateMany2ManyName">
-           <property name="text">
-            <string>Generate name for MN association</string>
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelOwnerEntity">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
-           <property name="icon">
-            <iconset resource="../../Images/images.qrc">
-             <normaloff>:/FunctionImages/alias_16.png</normaloff>:/FunctionImages/alias_16.png</iconset>
+           <property name="text">
+            <string>Owner Entity</string>
            </property>
           </widget>
          </item>
@@ -160,11 +169,25 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1" colspan="2">
-          <widget class="QComboBox" name="comboEntityInverse">
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelMNEntity">
+           <property name="text">
+            <string>MN Entity</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="labelKind">
+           <property name="text">
+            <string>Association Kind</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="2">
+          <widget class="QComboBox" name="comboAssociationKind">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
+             <horstretch>5</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
@@ -271,7 +294,7 @@
             <string>Fill Inverse Alias</string>
            </property>
            <property name="icon">
-            <iconset resource="../../Images/images.qrc">
+            <iconset resource="../../Images/skipperImages.qrc">
              <normaloff>:/FunctionImages/alias_16.png</normaloff>:/FunctionImages/alias_16.png</iconset>
            </property>
           </widget>
@@ -282,7 +305,7 @@
             <string>Fill Owner Alias</string>
            </property>
            <property name="icon">
-            <iconset resource="../../Images/images.qrc">
+            <iconset resource="../../Images/skipperImages.qrc">
              <normaloff>:/FunctionImages/alias_16.png</normaloff>:/FunctionImages/alias_16.png</iconset>
            </property>
           </widget>
@@ -290,9 +313,98 @@
         </layout>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="layoutAssocFields_2">
+         <item>
+          <widget class="QLabel" name="labelPolymorphicCaption">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="text">
+            <string>Polymorphic Association</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="labelPolymorphicCaption2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridFields_2" columnminimumwidth="150,0">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>10</number>
+         </property>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="editPolymorphicTypeField"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelFieldId">
+           <property name="text">
+            <string>Id field</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="editPolymorphicIdField"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelPolymorphicName">
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelFieldType">
+           <property name="text">
+            <string>Type field</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="editPolymorphicIdentification"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelFieldIdentification">
+           <property name="text">
+            <string>Custom Identification</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="editPolymorphicName"/>
+         </item>
+        </layout>
+       </item>
+       <item>
         <layout class="QHBoxLayout" name="layoutFieldsInfo">
          <item>
-          <widget class="QLabel" name="labelInfo_5">
+          <widget class="QLabel" name="labelFieldsCaption">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -314,7 +426,7 @@
           </widget>
          </item>
          <item>
-          <widget class="Line" name="lineInfo_5">
+          <widget class="Line" name="labelFieldsCaption2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -374,11 +486,24 @@
          </item>
         </layout>
        </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>10</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="tabVisual">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/FunctionImages/palette_16.png</normaloff>:/FunctionImages/palette_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -595,7 +720,7 @@
   </action>
   <action name="actionRemoveField">
    <property name="icon">
-    <iconset resource="../../Images/images.qrc">
+    <iconset resource="../../Images/skipperImages.qrc">
      <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
    </property>
    <property name="text">
@@ -631,11 +756,10 @@
   <tabstop>checkSplitOwner</tabstop>
   <tabstop>checkSplitInverse</tabstop>
   <tabstop>editDescription</tabstop>
-  <tabstop>tabWidget</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../../Images/images.qrc"/>
+  <include location="../../Images/skipperImages.qrc"/>
  </resources>
  <connections>
   <connection>

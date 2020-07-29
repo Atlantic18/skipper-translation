@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>License Policy Agreement</string>
+   <string>Terms of Use</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
@@ -23,7 +23,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Please read the following license agreement carefully. Press the PAGE DOWN key to see the rest of the agreement.</string>
+      <string>Please read the following terms of use carefully. Press the PAGE DOWN key to scroll down.</string>
      </property>
     </widget>
    </item>
@@ -37,7 +37,7 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Do you accept all the temrs of the preceeding License Agreement? If you select No, the application will close.</string>
+      <string>Do you accept all of the preceding Terms of Use? If you select No, the application will close.</string>
      </property>
     </widget>
    </item>

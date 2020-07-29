@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>465</width>
-    <height>297</height>
+    <width>451</width>
+    <height>507</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -69,20 +69,13 @@
         </layout>
        </item>
        <item>
-        <layout class="QGridLayout" name="gridCommon" columnminimumwidth="150,0">
+        <layout class="QGridLayout" name="gridCommon">
          <property name="leftMargin">
           <number>10</number>
          </property>
          <property name="verticalSpacing">
           <number>10</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QLabel" name="labelCaption">
-           <property name="text">
-            <string>Caption</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="1">
           <widget class="QLineEdit" name="editCaption">
            <property name="minimumSize">
@@ -93,7 +86,45 @@
            </property>
           </widget>
          </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelCaption">
+           <property name="text">
+            <string>Caption</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Namespace</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="Atomix::QtExt::QLineEditNamespace" name="editNamespace">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+          </widget>
+         </item>
          <item row="2" column="0">
+          <widget class="QLabel" name="labelExportPath">
+           <property name="text">
+            <string>Relative Export Path</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="labelBackgroundColor">
+           <property name="text">
+            <string>Background Color</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
           <widget class="QLabel" name="labelDescription">
            <property name="text">
             <string>Description</string>
@@ -103,21 +134,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
-          <widget class="QPlainTextEdit" name="editDescription">
-           <property name="tabChangesFocus">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="labelBackgroundColor">
-           <property name="text">
-            <string>Background Color</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
+         <item row="4" column="1">
           <widget class="Atomix::QtGui::QtColorPickerButton" name="widgetBackgroundColor" native="true">
            <property name="minimumSize">
             <size>
@@ -127,6 +144,74 @@
            </property>
            <property name="focusPolicy">
             <enum>Qt::StrongFocus</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLineEdit" name="editExportPath">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="btnExportPath">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="text">
+              <string notr="true">...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="5" column="1">
+          <widget class="QPlainTextEdit" name="editDescription">
+           <property name="tabChangesFocus">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelFullExportPath">
+           <property name="font">
+            <font>
+             <italic>true</italic>
+            </font>
+           </property>
+           <property name="text">
+            <string>Full Export Path</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="editFullExportPath">
+           <property name="font">
+            <font>
+             <italic>false</italic>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(0, 0, 0, 0);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="frame">
+            <bool>false</bool>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -161,13 +246,16 @@
    <header location="global">axQt/axQtGui/colorPicker.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>Atomix::QtExt::QLineEditNamespace</class>
+   <extends>QLineEdit</extends>
+   <header location="global">axQt/axQtGui/lineEditNamespace.h</header>
+  </customwidget>
  </customwidgets>
  <tabstops>
   <tabstop>editCaption</tabstop>
-  <tabstop>widgetBackgroundColor</tabstop>
-  <tabstop>editDescription</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>buttonBox</tabstop>
+  <tabstop>editNamespace</tabstop>
+  
  </tabstops>
  <resources>
   <include location="../../Images/images.qrc"/>

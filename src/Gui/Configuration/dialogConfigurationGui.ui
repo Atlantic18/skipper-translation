@@ -14,7 +14,16 @@
    <string notr="true">Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -77,6 +86,12 @@
          </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="text">
             <string>Language</string>
            </property>
@@ -104,6 +119,71 @@
          </item>
          <item row="1" column="1">
           <widget class="QComboBox" name="comboApplicationStyle"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelConfiguration_4">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Common GUI Configuration</string>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>20</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="comboChildCenterMode">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Sub-dialogs position mode</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -174,17 +254,24 @@
          <property name="horizontalSpacing">
           <number>10</number>
          </property>
-         <item row="0" column="0">
-          <widget class="QCheckBox" name="checkAliasesInPluralForms">
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkDisableWizardCancel">
            <property name="text">
-            <string>Generate plural aliases for &quot;many&quot; side of associations</string>
+            <string>Disable wizard window cancel confirmation</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="checkAutomaticallyRemoveAssociationFields">
+           <property name="text">
+            <string>Automatically remove association fields while removing association</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QCheckBox" name="checkShowPropertyEditorInObjectEditors">
+          <widget class="QCheckBox" name="checkDisableWindowCancel">
            <property name="text">
-            <string>Display Property Editor in model objects dialogs</string>
+            <string>Disable edit window cancel confirmation</string>
            </property>
           </widget>
          </item>

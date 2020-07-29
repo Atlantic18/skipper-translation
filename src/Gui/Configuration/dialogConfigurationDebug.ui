@@ -14,7 +14,16 @@
    <string notr="true">Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item>
@@ -24,7 +33,7 @@
      </property>
      <widget class="QWidget" name="tabSystemInfo">
       <attribute name="title">
-       <string>System Configuration</string>
+       <string notr="true">System Configuration</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
@@ -48,36 +57,60 @@
          <property name="spacing">
           <number>10</number>
          </property>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string notr="true">Alternative check server</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string notr="true">Beta versions download</string>
+            <string notr="true">Minimal version type</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_3">
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkUpdateEnabled">
            <property name="text">
-            <string notr="true">Alternative download server</string>
+            <string notr="true">Update enabled</string>
            </property>
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QCheckBox" name="checkDownloadBetaversions">
-           <property name="text">
-            <string notr="true">Allow beta version downloads</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QRadioButton" name="radioStable">
+             <property name="text">
+              <string notr="true">Stable</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioBeta">
+             <property name="text">
+              <string notr="true">Beta</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioAlpha">
+             <property name="text">
+              <string notr="true">Alpha</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
          </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="editUpdateServer">
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="editStarkServer">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -89,8 +122,12 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="editDownloadServer"/>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string notr="true">Stark server url</string>
+           </property>
+          </widget>
          </item>
          <item row="3" column="1">
           <layout class="QHBoxLayout" name="horizontalLayout">
@@ -123,6 +160,16 @@
            </item>
           </layout>
          </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string notr="true">Simulate version</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="editSimulatedVersion"/>
+         </item>
         </layout>
        </item>
        <item>
@@ -146,8 +193,25 @@
          <property name="spacing">
           <number>10</number>
          </property>
-         <item row="3" column="1">
-          <widget class="QLineEdit" name="editSystemId"/>
+         <item row="0" column="2">
+          <widget class="QLabel" name="labelHddId">
+           <property name="text">
+            <string notr="true">HDD ID</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="labelMachineCode">
+           <property name="text">
+            <string notr="true">Merged String</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLineEdit" name="editHddId"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="editCpuId"/>
          </item>
          <item row="0" column="0">
           <widget class="QLabel" name="labelCpuId">
@@ -156,55 +220,68 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="editSystemId"/>
+         </item>
+         <item row="2" column="0">
           <widget class="QLabel" name="labelSystemId">
            <property name="text">
             <string notr="true">System ID</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="editCpuId"/>
-         </item>
-         <item row="0" column="3">
-          <widget class="QLineEdit" name="editHddId"/>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="labelMachineCode">
-           <property name="text">
-            <string notr="true">Machine Code</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="labelHddId">
-           <property name="text">
-            <string notr="true">HDD ID</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1" colspan="3">
+         <item row="3" column="1" colspan="3">
           <widget class="QLineEdit" name="editMachineCodeRaw"/>
          </item>
-         <item row="5" column="1" colspan="3">
+         <item row="4" column="1" colspan="3">
           <widget class="QLineEdit" name="editMachineCodeLatest"/>
          </item>
-         <item row="5" column="0">
+         <item row="4" column="0">
           <widget class="QLabel" name="label_5">
            <property name="text">
-            <string notr="true">Latest</string>
+            <string notr="true">Computed Latest</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
+         <item row="5" column="1" colspan="3">
+          <widget class="QLineEdit" name="editMachineCodeCurrent"/>
+         </item>
+         <item row="5" column="0">
           <widget class="QLabel" name="label_6">
            <property name="text">
-            <string notr="true">Current</string>
+            <string notr="true">Computed Current</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="1" colspan="3">
-          <widget class="QLineEdit" name="editMachineCodeCurrent"/>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string notr="true">OS ID</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="editOperationSystemId"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string notr="true">MB ID</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="editMatherboardId"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string notr="true">Install date</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLineEdit" name="editInstallationDate"/>
          </item>
         </layout>
        </item>
@@ -226,7 +303,7 @@
          <item row="0" column="1">
           <widget class="QPushButton" name="btnCrashReport">
            <property name="text">
-            <string>Crash Report</string>
+            <string notr="true">Crash Report</string>
            </property>
           </widget>
          </item>

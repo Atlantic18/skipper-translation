@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>656</width>
-    <height>788</height>
+    <height>838</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -541,6 +541,51 @@
        </item>
        <item>
         <widget class="QPushButton" name="btnCommentDelete">
+         <property name="text">
+          <string notr="true">Delete</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_10b">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string notr="true">Universal object actions</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9b">
+       <item>
+        <widget class="QPushButton" name="btnUniversalObjectAdd">
+         <property name="text">
+          <string notr="true">Add</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnUniversalObjectAddWithRegion">
+         <property name="text">
+          <string notr="true">Add w.R.</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnUniversalObjectEdit">
+         <property name="text">
+          <string notr="true">Edit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnUniversalObjectDelete">
          <property name="text">
           <string notr="true">Delete</string>
          </property>

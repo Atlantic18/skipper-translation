@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>606</width>
-    <height>435</height>
+    <width>640</width>
+    <height>440</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Project Editor</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../Images/images.qrc">
+   <iconset resource="../../Images/skipperImages.qrc">
     <normaloff>:/ModelObjects/project_16.png</normaloff>:/ModelObjects/project_16.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -25,7 +25,7 @@
      </property>
      <widget class="QWidget" name="tabCommon">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/project_16.png</normaloff>:/ModelObjects/project_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -155,7 +155,7 @@
      </widget>
      <widget class="QWidget" name="tabFrameworks">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/FunctionImages/frameworks_16.png</normaloff>:/FunctionImages/frameworks_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -301,11 +301,9 @@
   <tabstop>editProjectDescription</tabstop>
   <tabstop>editMvcFramework</tabstop>
   <tabstop>editOrmFramework</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../../Images/images.qrc"/>
+  <include location="../../Images/skipperImages.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>639</width>
-    <height>452</height>
+    <width>640</width>
+    <height>440</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -99,7 +99,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
+         <item row="3" column="0">
           <widget class="QLabel" name="labelDescription">
            <property name="text">
             <string>Description</string>
@@ -109,7 +109,14 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelBgColor">
+           <property name="text">
+            <string>Background Color</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
           <widget class="QPlainTextEdit" name="editModuleDescription">
            <property name="focusPolicy">
             <enum>Qt::WheelFocus</enum>
@@ -119,14 +126,7 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="labelBgColor">
-           <property name="text">
-            <string>Background Color</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
+         <item row="2" column="1">
           <widget class="Atomix::QtGui::QtColorPickerButton" name="widgetBackgroundColor" native="true">
            <property name="minimumSize">
             <size>
@@ -136,6 +136,23 @@
            </property>
            <property name="focusPolicy">
             <enum>Qt::StrongFocus</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelNamespace">
+           <property name="text">
+            <string>Namespace</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="Atomix::QtExt::QLineEditNamespace" name="editModuleNamespace">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
            </property>
           </widget>
          </item>
@@ -398,9 +415,16 @@ color: rgb(0, 0, 0);</string>
    <header location="global">axQt/axQtGui/colorPicker.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>Atomix::QtExt::QLineEditNamespace</class>
+   <extends>QLineEdit</extends>
+   <header location="global">axQt/axQtGui/lineEditNamespace.h</header>
+  </customwidget>
  </customwidgets>
  <tabstops>
+  
   <tabstop>editModuleName</tabstop>
+  <tabstop>editModuleNamespace</tabstop>
   <tabstop>widgetBackgroundColor</tabstop>
   <tabstop>editModuleDescription</tabstop>
   <tabstop>radioStoreInProject</tabstop>
@@ -410,6 +434,7 @@ color: rgb(0, 0, 0);</string>
   <tabstop>comboDataFormat</tabstop>
   <tabstop>editExportPath</tabstop>
   <tabstop>btnExportPath</tabstop>
+  <tabstop>editFullExportPath</tabstop>
  </tabstops>
  <resources>
   <include location="../../Images/images.qrc"/>

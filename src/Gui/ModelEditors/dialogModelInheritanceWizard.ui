@@ -14,7 +14,7 @@
    <string>Inheritance Wizard</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../Images/images.qrc">
+   <iconset resource="../../Images/skipperImages.qrc">
     <normaloff>:/ModelObjects/inheritance_16.png</normaloff>:/ModelObjects/inheritance_16.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -25,7 +25,7 @@
      </property>
      <widget class="QWidget" name="tabData">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/inheritance_16.png</normaloff>:/ModelObjects/inheritance_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -253,7 +253,7 @@
      </widget>
      <widget class="QWidget" name="tabVisual">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/FunctionImages/palette_16.png</normaloff>:/FunctionImages/palette_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -297,7 +297,7 @@
         </layout>
        </item>
        <item>
-        <layout class="QGridLayout" name="gridLayout" columnminimumwidth="150,0">
+        <layout class="QGridLayout" name="gridLayout">
          <property name="leftMargin">
           <number>10</number>
          </property>
@@ -308,6 +308,23 @@
           <widget class="QLabel" name="label">
            <property name="text">
             <string>Caption</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Color</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="Atomix::QtGui::QtColorPickerButton" name="widgetLineColor" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
            </property>
           </widget>
          </item>
@@ -341,20 +358,10 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_2">
+         <item row="3" column="1">
+          <widget class="QCheckBox" name="checkHideDerived">
            <property name="text">
-            <string>Color</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="Atomix::QtGui::QtColorPickerButton" name="widgetLineColor" native="true">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>23</height>
-            </size>
+            <string>Hide derived fields</string>
            </property>
           </widget>
          </item>
@@ -460,11 +467,10 @@
   <tabstop>editCaption</tabstop>
   <tabstop>checkSplitInheritance</tabstop>
   <tabstop>editDescription</tabstop>
-  <tabstop>tabWidget</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources>
-  <include location="../../Images/images.qrc"/>
+  <include location="../../Images/skipperImages.qrc"/>
  </resources>
  <connections>
   <connection>

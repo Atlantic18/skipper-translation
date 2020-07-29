@@ -187,7 +187,7 @@
   <tabstop>widgetTextColor</tabstop>
   <tabstop>widgetBackgroundColor</tabstop>
   <tabstop>editDescription</tabstop>
-  <tabstop>tabWidget</tabstop>
+  
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources>

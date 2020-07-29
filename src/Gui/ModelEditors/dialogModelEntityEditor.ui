@@ -23,65 +23,10 @@
    <string>Entity Editor</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../Images/images.qrc">
+   <iconset resource="../../Images/skipperImages.qrc">
     <normaloff>:/ModelObjects/entity_16.png</normaloff>:/ModelObjects/entity_16.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
-   <item>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="labelName">
-       <property name="text">
-        <string>Entity name</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="editName">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>23</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QLabel" name="labelDescription">
-       <property name="text">
-        <string>Description</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3" rowspan="2">
-      <widget class="QPlainTextEdit" name="editDescription">
-       <property name="tabChangesFocus">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="labelLocation">
-       <property name="text">
-        <string>Entity location</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="editLocation">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>23</height>
-        </size>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
    <item>
     <widget class="Atomix::QtExt::QTabWidgetEx" name="tabWidget">
      <property name="styleSheet">
@@ -92,13 +37,68 @@
      </property>
      <widget class="QWidget" name="tabFields">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/entity_16.png</normaloff>:/ModelObjects/entity_16.png</iconset>
       </attribute>
       <attribute name="title">
        <string>Field Properties</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelName">
+           <property name="text">
+            <string>Entity name</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="editName">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="labelDescription">
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3" rowspan="2">
+          <widget class="QPlainTextEdit" name="editDescription">
+           <property name="tabChangesFocus">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="labelLocation">
+           <property name="text">
+            <string>Namespace</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="Atomix::QtExt::QLineEditNamespace" name="editNamespace">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="readOnly">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
        <item>
         <layout class="QHBoxLayout" name="layoutFieldsActions">
          <property name="spacing">
@@ -117,11 +117,66 @@
             <string>Add Field</string>
            </property>
            <property name="icon">
-            <iconset resource="../../Images/images.qrc">
+            <iconset resource="../../Images/skipperImages.qrc">
              <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
            </property>
            <property name="shortcut">
             <string>Ins</string>
+           </property>
+           <property name="popupMode">
+            <enum>QToolButton::DelayedPopup</enum>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButtonFieldTemplate">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new field based on selected template to entity.&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Shortcuts:&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ALT+INSERT&lt;/span&gt; Add new field(s) to entity&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Add Field Template</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/skipperImages.qrc">
+             <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Alt+Ins</string>
+           </property>
+           <property name="popupMode">
+            <enum>QToolButton::MenuButtonPopup</enum>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonTextBesideIcon</enum>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+           <property name="arrowType">
+            <enum>Qt::NoArrow</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButtonFieldDuplicate">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Duplicate field in entity.&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Shortcuts:&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;CTRL+G&lt;/span&gt; Duplicate field&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Duplicate Field</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../Images/skipperImages.qrc">
+             <normaloff>:/CommonActions/duplicate_16.png</normaloff>:/CommonActions/duplicate_16.png</iconset>
+           </property>
+           <property name="shortcut">
+            <string>Ctrl+G</string>
            </property>
            <property name="popupMode">
             <enum>QToolButton::DelayedPopup</enum>
@@ -144,10 +199,10 @@
 </string>
            </property>
            <property name="text">
-            <string>Remove Field</string>
+            <string>Remove</string>
            </property>
            <property name="icon">
-            <iconset resource="../../Images/images.qrc">
+            <iconset resource="../../Images/skipperImages.qrc">
              <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
            </property>
            <property name="shortcut">
@@ -178,10 +233,10 @@
 </string>
            </property>
            <property name="text">
-            <string>Item Up</string>
+            <string>Move Up</string>
            </property>
            <property name="icon">
-            <iconset resource="../../Images/images.qrc">
+            <iconset resource="../../Images/skipperImages.qrc">
              <normaloff>:/CommonActions/arrowMoveUp_16.png</normaloff>:/CommonActions/arrowMoveUp_16.png</iconset>
            </property>
            <property name="shortcut">
@@ -205,10 +260,10 @@
 </string>
            </property>
            <property name="text">
-            <string>Item Down</string>
+            <string>Move Down</string>
            </property>
            <property name="icon">
-            <iconset resource="../../Images/images.qrc">
+            <iconset resource="../../Images/skipperImages.qrc">
              <normaloff>:/CommonActions/arrowMoveDown_16.png</normaloff>:/CommonActions/arrowMoveDown_16.png</iconset>
            </property>
            <property name="shortcut">
@@ -232,10 +287,10 @@
 </string>
            </property>
            <property name="text">
-            <string>Item First</string>
+            <string>Move First</string>
            </property>
            <property name="icon">
-            <iconset resource="../../Images/images.qrc">
+            <iconset resource="../../Images/skipperImages.qrc">
              <normaloff>:/CommonActions/arrowMoveFirst_16.png</normaloff>:/CommonActions/arrowMoveFirst_16.png</iconset>
            </property>
            <property name="shortcut">
@@ -259,10 +314,10 @@
 </string>
            </property>
            <property name="text">
-            <string>Item Last</string>
+            <string>Move Last</string>
            </property>
            <property name="icon">
-            <iconset resource="../../Images/images.qrc">
+            <iconset resource="../../Images/skipperImages.qrc">
              <normaloff>:/CommonActions/arrowMoveLast_16.png</normaloff>:/CommonActions/arrowMoveLast_16.png</iconset>
            </property>
            <property name="shortcut">
@@ -320,7 +375,7 @@
      </widget>
      <widget class="QWidget" name="tabIndexes">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/index_16.png</normaloff>:/ModelObjects/index_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -329,13 +384,6 @@
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <layout class="QGridLayout" name="gridIndexes" columnstretch="3,1">
-         <item row="0" column="1">
-          <widget class="QLabel" name="labelIndexedFields">
-           <property name="text">
-            <string>Indexed Fields</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="0">
           <widget class="QTableView" name="tableIndexes">
            <property name="styleSheet">
@@ -382,8 +430,11 @@
               <string>Add Index</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ins</string>
              </property>
              <property name="popupMode">
               <enum>QToolButton::DelayedPopup</enum>
@@ -399,11 +450,14 @@
            <item>
             <widget class="QToolButton" name="toolButtonIndexEdit">
              <property name="text">
-              <string>Edit Index</string>
+              <string>Edit</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/edit_16.png</normaloff>:/CommonActions/edit_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string notr="true">Return</string>
              </property>
              <property name="toolButtonStyle">
               <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -416,11 +470,14 @@
            <item>
             <widget class="QToolButton" name="toolButtonIndexRemove">
              <property name="text">
-              <string>Remove Index</string>
+              <string>Remove</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Del</string>
              </property>
              <property name="toolButtonStyle">
               <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -475,7 +532,7 @@
      </widget>
      <widget class="QWidget" name="tabAssociations">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/association_16.png</normaloff>:/ModelObjects/association_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -487,13 +544,6 @@
          <property name="leftMargin">
           <number>0</number>
          </property>
-         <item row="0" column="1">
-          <widget class="QLabel" name="labelAssociationFields">
-           <property name="text">
-            <string>Association Fields</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="0">
           <widget class="QTableView" name="tableAssociations">
            <property name="styleSheet">
@@ -540,8 +590,34 @@
               <string>Add Association</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ins</string>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::DelayedPopup</enum>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonAssociationCollectionAdd">
+             <property name="text">
+              <string>Add Association Collection</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/skipperImages.qrc">
+               <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ins</string>
              </property>
              <property name="popupMode">
               <enum>QToolButton::DelayedPopup</enum>
@@ -560,7 +636,7 @@
               <string>Add ManyToMany</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
              </property>
              <property name="toolButtonStyle">
@@ -574,11 +650,14 @@
            <item>
             <widget class="QToolButton" name="toolButtonAssociationEdit">
              <property name="text">
-              <string>Edit Association</string>
+              <string>Edit</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/edit_16.png</normaloff>:/CommonActions/edit_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string notr="true">Return</string>
              </property>
              <property name="toolButtonStyle">
               <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -591,11 +670,14 @@
            <item>
             <widget class="QToolButton" name="toolButtonAssociationRemove">
              <property name="text">
-              <string>Remove Association</string>
+              <string>Remove</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Del</string>
              </property>
              <property name="toolButtonStyle">
               <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -606,7 +688,7 @@
             </widget>
            </item>
            <item>
-            <spacer name="horizontalSpacer_3">
+            <spacer name="horizontalSpacer_3e">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -648,9 +730,176 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="tabEmbeddeds">
+      <attribute name="icon">
+       <iconset resource="../../Images/skipperImages.qrc">
+        <normaloff>:/ModelObjects/embedded_16.png</normaloff>:/ModelObjects/embedded_16.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Embeddeds</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4e">
+       <item>
+        <layout class="QGridLayout" name="gridEmbeddeds" columnstretch="3">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <item row="1" column="0">
+          <widget class="QTableView" name="tableEmbeddeds">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="horizontalScrollMode">
+            <enum>QAbstractItemView::ScrollPerPixel</enum>
+           </property>
+           <attribute name="horizontalHeaderHighlightSections">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="layoutEmbeddedActions">
+           <item>
+            <widget class="QToolButton" name="toolButtonEmbeddedAdd">
+             <property name="text">
+              <string>Add Embedded</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/skipperImages.qrc">
+               <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ins</string>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::DelayedPopup</enum>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonEmbeddedCollectionAdd">
+             <property name="text">
+              <string>Add Embedded Collection</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/skipperImages.qrc">
+               <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ins</string>
+             </property>
+             <property name="popupMode">
+              <enum>QToolButton::DelayedPopup</enum>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonEmbeddedEdit">
+             <property name="text">
+              <string>Edit</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/skipperImages.qrc">
+               <normaloff>:/CommonActions/edit_16.png</normaloff>:/CommonActions/edit_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string notr="true">Return</string>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="toolButtonEmbeddedRemove">
+             <property name="text">
+              <string>Remove</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../../Images/skipperImages.qrc">
+               <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Del</string>
+             </property>
+             <property name="toolButtonStyle">
+              <enum>Qt::ToolButtonTextBesideIcon</enum>
+             </property>
+             <property name="autoRaise">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutDescription_2e" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="labelEmbeddedDescription">
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="editEmbeddedDescription">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="tabInheritance">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/ModelObjects/inheritance_16.png</normaloff>:/ModelObjects/inheritance_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -689,8 +938,11 @@
               <string>Add Inheritance</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/add_16.png</normaloff>:/CommonActions/add_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Ins</string>
              </property>
              <property name="popupMode">
               <enum>QToolButton::DelayedPopup</enum>
@@ -706,11 +958,14 @@
            <item>
             <widget class="QToolButton" name="toolButtonInheritanceEdit">
              <property name="text">
-              <string>Edit Inheritance</string>
+              <string>Edit</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/edit_16.png</normaloff>:/CommonActions/edit_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string notr="true">Return</string>
              </property>
              <property name="toolButtonStyle">
               <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -723,11 +978,14 @@
            <item>
             <widget class="QToolButton" name="toolButtonInheritanceRemove">
              <property name="text">
-              <string>Remove Inheritance</string>
+              <string>Remove</string>
              </property>
              <property name="icon">
-              <iconset resource="../../Images/images.qrc">
+              <iconset resource="../../Images/skipperImages.qrc">
                <normaloff>:/CommonActions/delete_16.png</normaloff>:/CommonActions/delete_16.png</iconset>
+             </property>
+             <property name="shortcut">
+              <string>Del</string>
              </property>
              <property name="toolButtonStyle">
               <enum>Qt::ToolButtonTextBesideIcon</enum>
@@ -782,7 +1040,7 @@
      </widget>
      <widget class="QWidget" name="tabAppearance">
       <attribute name="icon">
-       <iconset resource="../../Images/images.qrc">
+       <iconset resource="../../Images/skipperImages.qrc">
         <normaloff>:/FunctionImages/palette_16.png</normaloff>:/FunctionImages/palette_16.png</iconset>
       </attribute>
       <attribute name="title">
@@ -914,31 +1172,31 @@
     </widget>
    </item>
   </layout>
-  <action name="actionFieldAddCurrentPosition">
+  <action name="actionItemAddCurrentPosition">
    <property name="text">
-    <string notr="true">FieldAddCurrentPosition</string>
+    <string notr="true">ItemAddCurrentPosition</string>
    </property>
    <property name="toolTip">
-    <string notr="true">FieldAddCurrentPosition</string>
+    <string notr="true">ItemAddCurrentPosition</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Ins</string>
    </property>
   </action>
-  <action name="actionFieldAdd">
+  <action name="actionItemAdd">
    <property name="text">
-    <string notr="true">actionFieldAdd</string>
+    <string notr="true">actionItemAdd</string>
    </property>
    <property name="toolTip">
-    <string notr="true">FieldAdd</string>
+    <string notr="true">ItemAdd</string>
    </property>
   </action>
-  <action name="actionFieldDel">
+  <action name="actionItemDel">
    <property name="text">
-    <string notr="true">actionFieldDel</string>
+    <string notr="true">actionItemDel</string>
    </property>
    <property name="toolTip">
-    <string notr="true">FieldDel</string>
+    <string notr="true">ItemDel</string>
    </property>
   </action>
  </widget>
@@ -960,12 +1218,18 @@
    <extends>QTableView</extends>
    <header>axQt/axQtGui/tableViewEx.h</header>
   </customwidget>
+  <customwidget>
+   <class>Atomix::QtExt::QLineEditNamespace</class>
+   <extends>QLineEdit</extends>
+   <header location="global">axQt/axQtGui/lineEditNamespace.h</header>
+  </customwidget>
  </customwidgets>
  <tabstops>
   <tabstop>editName</tabstop>
   <tabstop>editDescription</tabstop>
-  <tabstop>editLocation</tabstop>
+  <tabstop>editNamespace</tabstop>
   <tabstop>toolButtonFieldAdd</tabstop>
+  <tabstop>toolButtonFieldDuplicate</tabstop>
   <tabstop>toolButtonFieldRemove</tabstop>
   <tabstop>toolButtonFieldUp</tabstop>
   <tabstop>toolButtonFieldDown</tabstop>
@@ -977,23 +1241,30 @@
   <tabstop>toolButtonIndexRemove</tabstop>
   <tabstop>tableIndexes</tabstop>
   <tabstop>tableIndexFields</tabstop>
+  <tabstop>editIndexDescription</tabstop>
   <tabstop>toolButtonAssociationAdd</tabstop>
+  <tabstop>toolButtonAssociationCollectionAdd</tabstop>
+  <tabstop>toolButtonAssociationMnAdd</tabstop>
   <tabstop>toolButtonAssociationEdit</tabstop>
   <tabstop>toolButtonAssociationRemove</tabstop>
   <tabstop>tableAssociations</tabstop>
   <tabstop>tableAssociationFields</tabstop>
   <tabstop>editAssociationDescription</tabstop>
+  <tabstop>toolButtonEmbeddedAdd</tabstop>
+  <tabstop>toolButtonEmbeddedCollectionAdd</tabstop>
+  <tabstop>toolButtonEmbeddedEdit</tabstop>
+  <tabstop>toolButtonEmbeddedRemove</tabstop>
+  <tabstop>tableEmbeddeds</tabstop>
+  <tabstop>editEmbeddedDescription</tabstop>
   <tabstop>toolButtonInheritanceAdd</tabstop>
   <tabstop>toolButtonInheritanceEdit</tabstop>
   <tabstop>toolButtonInheritanceRemove</tabstop>
   <tabstop>tableInheritance</tabstop>
   <tabstop>editInheritanceDescription</tabstop>
   <tabstop>tabWidget</tabstop>
-  <tabstop>buttonBox</tabstop>
-  <tabstop>editIndexDescription</tabstop>
  </tabstops>
  <resources>
-  <include location="../../Images/images.qrc"/>
+  <include location="../../Images/skipperImages.qrc"/>
  </resources>
  <connections>
   <connection>
